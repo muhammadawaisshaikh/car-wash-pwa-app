@@ -1,0 +1,37 @@
+@import '/src/styles.scss';
+
+.heading {
+    @include typography($fontSize: 17px, $fontWeight: 500, $color: $darkDefault, $padding: 0);
+}
+
+.app-custom-card
+{
+    &:focus {
+        outline: none;
+        border: none;
+    }
+}
+
+.item {
+    position: relative;
+}
+
+.check {
+    position: absolute;
+    right: 0;
+    top: -15px;
+    font-size: 20px;
+    color: $green;
+    visibility: hidden;
+    z-index: 1;
+    i {
+        background: #ffffff;
+        border-radius: 50%;
+    }
+}
+
+.selected {
+    .check {
+        visibility: visible;
+    }
+}
