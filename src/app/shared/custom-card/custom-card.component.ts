@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CustomCardComponent implements OnInit {
 
   @Input('data') data: any;
-  @Input('cardType') cardType: string; //list or grid
+  @Input('cardType') cardType: string | undefined; //list or grid
 
   constructor() { }
 

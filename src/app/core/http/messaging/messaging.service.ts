@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireMessaging } from '@angular/fire/messaging';
+import { AngularFireMessaging } from '@angular/fire/compat/messaging';
 import { BehaviorSubject } from 'rxjs'
 
 import { CheckLoginService } from '../../services/check-login/check-login.service';
@@ -16,7 +16,7 @@ export class MessagingService {
     private checkLoginService: CheckLoginService,
     ) {
     this.angularFireMessaging.messages.subscribe(
-      (_messaging: AngularFireMessaging) => {
+      (_messaging: any) => {
         _messaging.onMessage = _messaging.onMessage.bind(_messaging);
         _messaging.onTokenRefresh = _messaging.onTokenRefresh.bind(_messaging);
       }
@@ -29,7 +29,7 @@ export class MessagingService {
    * @param userId userId as a key 
    * @param token token as a value
    */
-  updateToken(token) {
+  updateToken(token: any) {
     // storing updated token in DB
     this.checkLoginService.setUserDeviceToken(token);
   }
@@ -41,14 +41,14 @@ export class MessagingService {
    */
   requestPermission() {
     this.angularFireMessaging.requestToken.subscribe(
-      (token) => {
+      (token: any) => {
         console.log(token);
         this.updateToken(token);
 
         // hitting available mshiko service to call store method that will store FCM device token in DB 
         this.checkLoginService.setUserDeviceToken(token);
       },
-      (err) => {
+      (err: any) => {
         console.error('Unable to get permission to notify.', err);
       }
     );
@@ -59,7 +59,7 @@ export class MessagingService {
    */
   receiveMessage() {
     this.angularFireMessaging.messages.subscribe(
-      (payload) => {
+      (payload: any) => {
         console.log("new message received. ", payload);
         this.currentMessage.next(payload);
       })

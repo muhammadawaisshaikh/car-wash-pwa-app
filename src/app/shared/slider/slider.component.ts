@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-slider',
@@ -30,14 +30,14 @@ export class SliderComponent implements OnInit {
   ngOnInit(): void {
     this.getCategories();
 
-    setTimeout(item => {
+    setTimeout((item: any) => {
       this.somethingWrong = true;
     }, 5000);
   }
 
   getCategories() {
     this.fireStore.collection(this.categoryCollection).get().subscribe((res) => {
-      res.docs.forEach((doc) => {
+      res.docs.forEach((doc: any) => {
         let item = {
           id: doc.id,
           image: doc.data()['image'],
@@ -49,7 +49,7 @@ export class SliderComponent implements OnInit {
     });
   }
 
-  categoryClicked(data) {
+  categoryClicked(data: any) {
     this.selectedCategory = data;
     this.selectCategory.emit(data);
   }

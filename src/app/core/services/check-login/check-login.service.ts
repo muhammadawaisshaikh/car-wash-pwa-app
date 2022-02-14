@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Subject, BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -40,16 +40,16 @@ export class CheckLoginService {
     if(data) return JSON.parse(data)
   }
 
-  setUserDeviceToken(token) {
+  setUserDeviceToken(token: any) {
     let id = this.getUserData().id;
     
     this.fireStore.collection(this.usersCollection).doc(id).update({
       device_token: token,
     })
-    .then(res => {
+    .then((res: any) => {
       console.log('token stored in DB');
     })
-    .catch(e => {
+    .catch((e: any) => {
       console.log(e);
     })
   }
@@ -59,8 +59,8 @@ export class CheckLoginService {
 
     let token = '';
 
-    this.fireStore.collection(this.usersCollection, (ref: { where: (arg0: string, arg1: string, arg2: any) => any; }) => ref.where('email', '==', email)).get().subscribe((res: { docs: any[]; }) => {
-      res.docs.forEach((doc) => {
+    this.fireStore.collection(this.usersCollection, ref => ref.where('email', '==', email)).get().subscribe((res: any) => {
+      res.docs.forEach((doc: any) => {
         token = doc.data()['device_token']
         console.log(token);
         return token;

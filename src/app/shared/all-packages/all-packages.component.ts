@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { BackNavigateService } from '../../core/services/back-navigate/back-navigate.service';
 import { PackagesService } from '../../core/services/packages/packages.service';
 
@@ -34,14 +34,14 @@ export class AllPackagesComponent implements OnInit {
     this.getPackages();
     this.getSelectedCategory();
 
-    setTimeout(item => {
+    setTimeout((item: any) => {
       this.somethingWrong = true;
     }, 5000);
   }
 
   getPackages() {
     this.fireStore.collection(this.packagesCollection).get().subscribe((res) => {
-      res.docs.forEach((doc) => {
+      res.docs.forEach((doc: any) => {
 
         let item = {
           id: doc.id,
@@ -64,12 +64,12 @@ export class AllPackagesComponent implements OnInit {
 
       this.selectedCategory = res;
 
-      let filtered = this.packagesUsed.filter(item => item.category[0].id == this.selectedCategory.id);
+      let filtered = this.packagesUsed.filter((item: any) => item.category[0].id == this.selectedCategory.id);
       this.packagesUsed = filtered;
     })
   }
 
-  selectPackage(selected) {
+  selectPackage(selected: { id: any; }) {
     if (this.selectedPackage.id == selected.id) {
       this.selectedPackage = '';
     }

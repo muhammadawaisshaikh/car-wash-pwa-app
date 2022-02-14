@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,7 @@ export class PackagesService {
 
   getCategories() {
     this.fireStore.collection(this.categoryCollection).get().subscribe((res) => {
-      res.docs.forEach((doc) => {
+      res.docs.forEach((doc: any) => {
         let item = {
           id: doc.id,
           image: doc.data()['image'],
@@ -42,7 +42,7 @@ export class PackagesService {
     return this.packagesData;
   }
 
-  setCategory(value) {
+  setCategory(value: any) {
     this.selectedCategory.next(value);
   }
 

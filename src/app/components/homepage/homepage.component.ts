@@ -27,13 +27,13 @@ export class HomepageComponent implements OnInit {
     this.permitPushNotifications();
   }
 
-  getCategory(data) {
+  getCategory(data: any) {
     this.selectedCategory = data;
     this.packageService.setCategory(this.selectedCategory);
   }
 
   ifLogin() {
-    this.checkLogin.status.subscribe(res => {
+    this.checkLogin.status.subscribe((res: any) => {
       this.loginStatus = res;
       
       if (this.loginStatus) {
