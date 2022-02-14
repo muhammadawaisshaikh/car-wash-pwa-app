@@ -1,0 +1,63 @@
+@import '/src/styles.scss';
+
+.signup-screen .heading h1{
+    font-size: 18px;
+    color: $lightDefault;
+    margin-bottom: 0px;
+}
+
+.social-bar .or p {
+    font-size: 18px;
+    color: $darkDefault;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.social-bar .or p::before {
+    content: "";
+    position: absolute;
+    top: 52%;
+    left: 0%;
+    width: 44%;
+    height: 2px;
+    background-color: #d4d4d4;
+}
+
+.social-bar .or p::after {
+    content: "";
+    position: absolute;
+    top: 52%;
+    right: 0%;
+    width: 44%;
+    height: 2px;
+    background-color: #d4d4d4;
+}
+
+.social-bar .icons ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0px;
+    padding-left: 0;
+}
+
+.social-bar .icons ul li {
+    padding: 0 15px;
+}
+
+.social-bar .icons ul li a i {
+    font-size: 28px;
+    color: $lightDefault;
+}
+
+.signup-screen .account-text span {
+    color: $black;
+    font-size: 13px;
+}
+
+.signup-screen .account-text a {
+    font-weight: 600;
+    color: $lightDefault;
+    font-size: 14px;
+    padding-left: 5px;
+}
