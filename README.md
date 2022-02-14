@@ -2,26 +2,34 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
-## Development server
+## Serve ng App on port
+ng serve --host 0.0.0.0 --disable-host-check
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Reactive Forms
+https://www.digitalocean.com/community/tutorials/angular-reactive-forms-introduction
 
-## Code scaffolding
+## AngularFire
+https://github.com/angular/angularfire
+https://github.com/angular/angularfire/blob/master/docs/install-and-setup.md
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## AngularFire Collections
+https://github.com/angular/angularfire/blob/master/docs/firestore/collections.md
 
-## Build
+## Angular Firestore CRUD
+https://blog.logrocket.com/creating-a-crud-firebase-documents-in-angular/
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Angular Firestore Collection Querying
+https://github.com/angular/angularfire/blob/master/docs/firestore/querying-collections.md
 
-## Running unit tests
+## Angular Fire Storage - Image Upload
+https://github.com/angular/angularfire/blob/master/docs/storage/storage.md
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Angular Firestore Auth
+https://github.com/angular/angularfire/blob/master/docs/auth/getting-started.md
+https://medium.com/javascript-in-plain-english/how-to-add-firebase-authentication-to-pwa-or-angular-project-using-angularfire-83a8f61d367c
 
-## Running end-to-end tests
+## github pages - live deploy
+https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Angular/Fire Push PWA
+https://medium.com/mighty-ghost-hack/angular-8-firebase-cloud-messaging-push-notifications-cc80d9b36f82
