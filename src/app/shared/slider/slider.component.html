@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-12">
+        <h3 class="heading">Categories</h3>
+    </div>
+    <div class="col-12 scrollmenu" *ngIf="categories.length > 0">
+        <div class="item" 
+            *ngFor="let item of categories" 
+            (click)="categoryClicked(item)"
+            [ngClass]="{'selected': selectedCategory.id == item.id}"
+        >
+            <div class="image-container">
+                <span class="check">
+                    <i class="fas fa-check-circle"></i>
+                </span>
+
+                <img class="large" src={{item.image}} alt="Category">
+            </div>
+            <p>{{item.name}}</p>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="text-center" *ngIf="categories.length == 0 && !somethingWrong">
+            <img class="loading" src="assets/img/loading.gif" alt="Loading ..." />
+        </div>
+    
+        <div class="text-center pt-3" *ngIf="categories.length == 0 && somethingWrong">
+            <img class="no-data" src="assets/img/no-data.png" alt="No Data" />
+        </div>
+    </div>
+</div>
