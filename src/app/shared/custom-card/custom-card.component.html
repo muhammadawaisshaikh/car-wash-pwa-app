@@ -1,0 +1,55 @@
+<!-- grid card  -->
+<div class="custom-card mb-3" *ngIf="cardType == 'grid'">
+    <div class="image">
+        <img src="{{data.image}}" alt="{{data.name}}">
+
+        <p class="price bg-gradient" *ngIf="data.price">
+            <span>Rs. </span>
+            <strong>{{data.price}}</strong>
+        </p>
+    </div>
+    <div class="content">
+        <h3 class="text-truncate" *ngIf="data.name">{{data.name}}</h3>
+        <p *ngIf="data.contact">{{data.contact}}</p>
+        <p *ngIf="data.category" class="text-muted">{{data.category[0].name}}</p>
+        <p *ngIf="data.location" class="text-muted">{{data.location}}</p>
+        <p *ngIf="data.notificationType" class="text-muted"><small>{{data.notificationType}}</small></p>
+
+        <div *ngIf="data.categories">
+            <span class="category-chip bg-gradient" *ngFor="let item of data.categories">
+                {{item}}
+            </span>
+        </div>
+    </div>
+</div>
+
+<!-- list card  -->
+<div class="custom-card my-3" *ngIf="cardType == 'list'">
+    <div class="row">
+        <div class="col-4">
+            <div class="image list">
+                <img src="{{data.image}}" alt="{{data.name}}">
+            </div>
+        </div>
+    
+        <div class="col-8">
+            <div class="content">
+                <h3 *ngIf="data.name">{{data.name}}</h3>
+                <p *ngIf="data.price" class="price bg-gradient">
+                    <span>Rs. </span>
+                    <strong>{{data.price}}</strong>
+                </p>
+                <p *ngIf="data.contact">{{data.contact}}</p>
+                <p *ngIf="data.category" class="text-muted">{{data.category[0].name}}</p>
+                <p *ngIf="data.location" class="text-muted">{{data.location}}</p>
+                <p *ngIf="data.notificationType" class="text-muted"><small>{{data.notificationType}}</small></p>
+            </div>
+            
+            <div *ngIf="data.categories">
+                <span class="category-chip bg-gradient" *ngFor="let item of data.categories">
+                    {{item}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
