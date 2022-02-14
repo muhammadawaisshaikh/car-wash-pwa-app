@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "car-wash-pwa-app:build:production",
+            "firebaseProject": "car-wash-app-742f4",
+            "firebaseHostingSite": "car-wash-app-742f4"
+          }
         }
       }
     }

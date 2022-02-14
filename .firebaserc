@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "car-wash-app-742f4": {
+      "hosting": {
+        "car-wash-pwa-app": [
+          "car-wash-app-742f4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "car-wash-app-742f4"
+  }
+}
