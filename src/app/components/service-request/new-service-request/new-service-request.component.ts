@@ -76,25 +76,29 @@ export class NewServiceRequestComponent implements OnInit {
   // 1 - Arrived at Destination
   // 2 - Service Done
   // 3 - Payment Recieved
-  serviceRequest() {    
-    this.fireStore.collection(this.serviceRequestCollection).add({
-      user: this.getUserData(),
-      location: this.programForm.value.location,
-      category: this.selectedCategory,
-      package: this.selectedPackage,
-      datetime: this.programForm.value.datetime,
-      payment: this.programForm.value.payment,
-      detailer: 'not-assigned',
-      status: 0
-    })
-    .then(res => {
-      // console.log(res);
-      this.router.navigateByUrl("/service-request");
-      this.programForm.reset();
-    })
-    .catch(e => {
-      console.log(e);
-    })
+  serviceRequest() {
+    if (this.programForm.status == 'VALID') {
+      this.fireStore.collection(this.serviceRequestCollection).add({
+        user: this.getUserData(),
+        location: this.programForm.value.location,
+        category: this.selectedCategory,
+        package: this.selectedPackage,
+        datetime: this.programForm.value.datetime,
+        payment: this.programForm.value.payment,
+        detailer: 'not-assigned',
+        status: 0
+      })
+      .then(res => {
+        // console.log(res);
+        this.router.navigateByUrl("/service-request");
+        this.programForm.reset();
+      })
+      .catch(e => {
+        console.log(e);
+      })
+    } else {
+      alert('Please provide all required details.');
+    }
   }
 
   getCategory(data: any) {
