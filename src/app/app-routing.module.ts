@@ -30,6 +30,10 @@ const routes: Routes = [
     path: 'payment',
     loadChildren: () => import('./components/payment/payment.module').then(m => m.PaymentModule)
   },
+  {
+    path: 'profile',
+    loadChildren: () => import('./components/profile/profile.module').then(m => m.ProfileModule)
+  },
 ];
 
 @NgModule({
