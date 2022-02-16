@@ -13,7 +13,7 @@ export class GetStatusDescriptionService {
   // 2 - Service Done
   // 3 - Payment Recieved
 
-  getStatus(value) {
+  getStatus(value: number): any {
     if (value == 0) return "Request Received";
     if (value == 1) return "Arrived at Destination";
     if (value == 2) return "Service Done";

@@ -22,6 +22,10 @@ const routes: Routes = [
     path: 'package-details',
     loadChildren: () => import('./components/package-details/package-details.module').then(m => m.PackageDetailsModule)
   },
+  {
+    path: 'service-request',
+    loadChildren: () => import('./components/service-request/service-request.module').then(m => m.ServiceRequestModule)
+  },
 ];
 
 @NgModule({

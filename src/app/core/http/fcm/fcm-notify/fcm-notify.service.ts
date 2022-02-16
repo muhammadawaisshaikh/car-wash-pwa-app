@@ -14,7 +14,7 @@ export class FcmNotifyService {
   ) { }
 
   // Notify
-  public Notify(data) {
+  public Notify(data: any) {
     const url = this.fcmConfig.fcmEndpoint;
 
     let headers = this.fcmConfig.headers();
