@@ -1,0 +1,62 @@
+<div class="all-categories-screen">
+    <div class="container">
+        <div class="heading pt-4">
+			<h1>All Categories</h1>
+        </div>
+
+        <!-- <div class="categories-cards" *ngIf="data.length > 0">
+            <div class="card mt-4" *ngFor="let item of data">
+                <img class="card-img-top" src={{item.image}}>
+                <div class="card-body">
+                    <p class="id"><strong>ID:</strong> {{item.id}}</p>
+                    <div class="row pt-2">
+                        <div class="col-6">
+                            <h6 class="category">{{item.name}}</h6>
+                        </div>
+                        <div class="col-6">
+                            <div class="icons text-right">
+                                <a routerLink="/admin/add-category"><i class="fas fa-eye"></i></a>
+                                <a routerLink="/admin/add-category"><i class="px-4 fas fa-pencil-alt"></i></a>
+                                <a><i class="fas fa-trash-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="categories-cards pb-5" *ngIf="data.length > 0">
+                <div *ngFor="let item of data">
+                    <div class="card mt-3">
+                        <div class="row">
+                            <div class="col-5">
+                                <img class="card-img-top" src={{item.image}}>
+                            </div>
+                            <div class="col-7 pl-0">
+                                <div class="content py-2">
+                                    <!-- <p class="id"><strong>ID:</strong> {{item.id}}</p> -->
+                                    <h5 class="package pb-3">{{item.name}}</h5>
+    
+                                    <div class="row">
+                                        <div class="col-12 icons">
+                                            <a routerLink="/admin/add-category" [state]="{ data: item}" (click)="backEnabled()"><i class="px-4 fas fa-pencil-alt"></i></a>
+                                            <a (click)="deleteCategory(item.id)"><i class="fas fa-trash-alt"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center pt-5" *ngIf="data.length == 0 && !somethingWrong">
+                <img class="content-loading" src="assets/img/content-loading.gif" alt="Loading ..." />
+            </div>
+    
+            <div class="text-center pt-5" *ngIf="data.length == 0 && somethingWrong">
+                <img class="no-data" src="assets/img/no-data.png" alt="No Data" />
+                <a (click)="getCategories()" class="rounded-btn w-100 mt-4">Try Again</a>
+            </div>
+
+    </div>
+</div>
