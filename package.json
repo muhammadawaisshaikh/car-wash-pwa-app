@@ -19,6 +19,7 @@
     "@angular/forms": "~12.1.0",
     "@angular/platform-browser": "~12.1.0",
     "@angular/platform-browser-dynamic": "~12.1.0",
+    "@angular/service-worker": "~12.1.0",
     "@angular/router": "~12.1.0",
     "rxjs": "~6.6.0",
     "ng-simple-slideshow": "^1.2.9",
