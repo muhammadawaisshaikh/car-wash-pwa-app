@@ -37,7 +37,7 @@
     .content {
         padding: 10px;
         h3 {
-            @include typography($fontSize: 17px, $fontWeight: 600, $color: $darkDefault, $padding: 0);
+            @include typography($fontSize: 17px, $fontWeight: 600, $color: $darkGray, $padding: 0);
         }
         p {
             @include typography($fontSize: 14px, $fontWeight: 400, $color: $darkDefault, $padding: 0);
