@@ -1,7 +1,7 @@
 @import '/src/styles.scss';
 
 .heading {
-    @include typography($fontSize: 17px, $fontWeight: 500, $color: $darkDefault, $padding: 0);
+    @include typography($fontSize: 17px, $fontWeight: 500, $color: $darkGray, $padding: 0);
 }
 
 .scrollmenu {
