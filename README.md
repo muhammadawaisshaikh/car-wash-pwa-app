@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
+# App Detailed Video
+[<img src="https://img.youtube.com/vi/egrLziXPRSU/maxresdefault.jpg" width="50%">](https://youtu.be/egrLziXPRSU)
+
+# App Demo
+https://62121cbce4bee70007cc361a--festive-curran-3f130f.netlify.app/
+
 # Setting up App in your local machine
 
 ## Clone source code from Github
