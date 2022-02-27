@@ -12,6 +12,8 @@
         height: 90px;
         border-radius: 50%;
         position: relative;
+        display: block;
+        margin: auto;
         img {
             &.small {
                 position: relative;
