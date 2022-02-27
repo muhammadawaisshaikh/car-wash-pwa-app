@@ -2,6 +2,28 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
+# Setting up App in your local machine
+
+## Clone source code from Github
+```
+git clone https://github.com/muhammadawaisshaikh/car-wash-pwa-app.git
+```
+
+## Installing Dependencies
+```
+npm install
+```
+
+## Start the App
+```
+ng serve
+```
+
+## Your App is up and running
+localhost:4200
+
+# Other References
+
 ## Serve ng App on port
 ng serve --host 0.0.0.0 --disable-host-check
 
