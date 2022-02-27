@@ -5,8 +5,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # App Detailed Video
 [<img src="https://img.youtube.com/vi/egrLziXPRSU/maxresdefault.jpg" width="50%">](https://youtu.be/egrLziXPRSU)
 
-# App Demo
-https://62121cbce4bee70007cc361a--festive-curran-3f130f.netlify.app/
+# App Demo & Detailed Article
+[App Demo](https://62121cbce4bee70007cc361a--festive-curran-3f130f.netlify.app/)
+[Detailed Article](https://muhammadawaisshaikh.hashnode.dev/car-wash-app-netlify-x-hashnode-hackathon)
 
 # Setting up App in your local machine
 
